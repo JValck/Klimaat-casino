@@ -16,6 +16,7 @@ class CreatePlayerAliasesTable extends Migration
     Schema::create('player_aliases', function (Blueprint $table) {
       $table->increments('id');
       $table->text('name');
+      $table->text('description');
     });
   }
 

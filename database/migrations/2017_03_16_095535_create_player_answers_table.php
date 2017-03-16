@@ -23,7 +23,7 @@ class CreatePlayerAnswersTable extends Migration
         $table->unsignedInteger('player_id');
         $table->unsignedInteger('game_id');
 
-        $table->unique(['player_id', 'question_id']);
+        $table->unique(['player_id', 'question_id', 'game_id']);
         $table->foreign('question_id')->references('id')->on('questions')->onDelete('cascade');//delete answer when Question is deleted
         $table->foreign('game_id')->references('id')->on('games')->onDelete('cascade');
         $table->foreign('player_id')->references('id')->on('players')->onDelete('cascade');
