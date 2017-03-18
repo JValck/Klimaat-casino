@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class PlayerAnswer extends Model
 {
     public $timestamps = false;
+    protected $table = 'player_answers';
 
     public function game()
     {

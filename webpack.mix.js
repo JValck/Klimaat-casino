@@ -40,3 +40,6 @@ mix.copy('node_modules/materialize-css/dist/css/materialize.min.css', 'public/cs
   // js copy
   .copy('node_modules/materialize-css/dist/js/materialize.min.js', 'public/js/materialize.js')
   .copy('node_modules/jquery/dist/jquery.min.js', 'public/js/jquery.js')
+
+  //custom
+  .copy(resourcesCss+'custom.css', 'public/css/custom.css')

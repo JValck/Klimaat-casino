@@ -13,5 +13,6 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(PlayerAliasesSeeder::class);
         $this->call(QuestionPinballAnswers::class);
+        $this->call(SettingSeeder::class);
     }
 }
