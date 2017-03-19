@@ -64,7 +64,7 @@ class Player extends Model
         $pinballId = $this->_generateRandomPinballId();
       }else{
           $answeredQuestionIds = $latestGame->playerAnswers()->select('question_id')->get()->toArray();
-          $unansweredPinballs = Question::whereNotIn('id', $answeredQuestionIds)->join('pinballs', 'pinballs.id', '<>', 'questions.id')->select('pinballs.id')->distinct()->get()->toArray();
+          $unansweredPinballs = Question::whereNotIn('questions.id', $answeredQuestionIds)->join('pinballs', 'pinballs.id', '<>', 'questions.id')->select('pinballs.id')->distinct()->get()->toArray();
           $pinballId = $this->_generateRandomPinballId($unansweredPinballs);
       }
       return $pinballId;

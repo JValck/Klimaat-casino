@@ -17,4 +17,9 @@ return [
   'aantalKilo' => 'Aantal Kg:',
   'scorebord' => 'Scorebord',
   'controleren' => 'Controleren',
+  'ongeldigAntwoord' => 'Ongeldig antwoord',
+  'answer' => 'Antwoord',
+  'doorgaan' => 'Doorgaan',
+  'helaas' => 'Helaas',
+  'proficiat' => 'Proficiat',
 ];

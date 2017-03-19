@@ -23,4 +23,5 @@ Route::group(['middleware' => 'isLoggedIn'], function(){
 
 Route::group(['middleware' => ['isLoggedIn', 'hasRaisedBet']], function(){
   Route::get('pinball/{id}', 'PinballController@index');
+  Route::post('pinball/{id}', 'PinballController@validateAnswer');
 });
