@@ -102,6 +102,12 @@ return [
 	|
 	*/
 
-	'attributes' => []
+	'attributes' => [
+		'email' => 'E-mail',
+		'email-confirmed' => 'bevestigde e-mail',
+		'question' => 'Vraag',
+		'answer' => 'Antwoord',
+		'bet' => 'Inzet',
+	]
 
 ];

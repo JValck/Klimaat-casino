@@ -18,7 +18,7 @@ class PlayerAliasesSeeder extends Seeder
         array('name' => 'Migrerende Adeliepinguïn', 'description' => 'Krill dat leeft rondom ijsschotsen is de voedselbron van deze pinguïn. Helaas daalt de krill populatie desastreus door de opwarming van het water.'),
         array('name' => 'Koudwaterige Atlantische Kabeljauw', 'description' => 'Overbevissing en veranderingen in de zeestromingen liggen aan de basis voor een hele hoop kopzorgen voor de Atlantische Kabeljauw. Vroeger herstelde de populatie zich snel van de bevissing, dat is nu niet meer het geval.'),
         array('name' => 'Temperatuursgevoelig Hertshoornkoraal', 'description' => 'Koraal is erg gevoelig voor temperatuursveranderingen. De stijging van de temperatuur is dan ook nefast.'),
-        array('name' => 'Uitgestorven Rode Pad', 'Volledig uitgestorven door droogte in de natuurlijke habitat.'),
+        array('name' => 'Uitgestorven Rode Pad', 'description' => 'Volledig uitgestorven door droogte in de natuurlijke habitat.'),
         array('name' => 'Vroeg broedende Bairds Strandloper', 'description' => 'Het broedseizoen valt steeds vroeger op het jaar, waardoor er te weinig voedselbronnen zijn om de jongen te laten opgroeien. Steeds minder jongen geraken aan de volwassen leeftijd.'),
         array('name' => 'Veeleisende Grote Berglobelia', 'description' => 'Door de hoge eisen van deze plant, kan het erg moeilijk aarden in zijn nieuwe habitat.'),
         array('name' => 'Verdronken Bramble Cay-mozaïekstaartrat', 'description' => 'Deze rat leeft aan de vloedlijn van Bramble Cay. Door de stijging van de zeespiegel en toenemende frequentie van stormen is dit eiland ten dode opgeschreven.'),
