@@ -18,7 +18,7 @@ class LoginController extends Controller
   public function validateLogin(Request $request)
   {
     $this->validate($request, [
-      'email' => 'required|email|min:8|unique:players,email',
+      'email' => 'required|email|min:8',
       'email-confirmed' => 'required|email|same:email',
       'alias' => 'required|numeric',
     ]);

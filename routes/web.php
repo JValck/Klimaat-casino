@@ -14,11 +14,13 @@
 Route::get('/', 'HomeController@index');
 Route::get('login', 'LoginController@index');
 Route::post('login', 'LoginController@validateLogin');
+Route::get('score', 'GameController@scoreboard');
 
 Route::group(['middleware' => 'isLoggedIn'], function(){
   Route::get('start', 'GameController@index');
   Route::get('bet', 'BetController@index');
   Route::post('bet', 'BetController@bet');
+  Route::get('end', 'GameController@end');
 });
 
 Route::group(['middleware' => ['isLoggedIn', 'hasRaisedBet']], function(){

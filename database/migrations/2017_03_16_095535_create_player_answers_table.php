@@ -16,7 +16,7 @@ class CreatePlayerAnswersTable extends Migration
       Schema::create('player_answers', function (Blueprint $table) {
         $table->increments('id');
         $table->unsignedSmallInteger('bet');
-        $table->boolean('right');
+        $table->boolean('correct');
         $table->boolean('joker_used')->default(false);
 
         $table->unsignedInteger('question_id');

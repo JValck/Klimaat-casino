@@ -35,10 +35,7 @@ class Player extends Model
       $emmission = intval((CasinoSetting::where('name', 'seed_money')->first())->setting);
       $latestGame = $this->getIncompleteGame();
       if(! is_null($latestGame)){
-        $correctBets = $latestGame->playerAnswers()->where('right', true)->get();
-        foreach ($correctBets as $bet) {
-          $emmission -= $bet->bet;
-        }
+        $emmission = $latestGame->getEmmission();
       }
       return $emmission;
     }
@@ -61,21 +58,17 @@ class Player extends Model
       $pinballId = 1;
       $latestGame = $this->getIncompleteGame();
       if(is_null($latestGame)){//not yet played
-        $pinballId = $this->_generateRandomPinballId();
+        $pinballId = Pinball::all()->get()->random()->id;
       }else{
-          $answeredQuestionIds = $latestGame->playerAnswers()->select('question_id')->get()->toArray();
-          $unansweredPinballs = Question::whereNotIn('questions.id', $answeredQuestionIds)->join('pinballs', 'pinballs.id', '<>', 'questions.id')->select('pinballs.id')->distinct()->get()->toArray();
-          $pinballId = $this->_generateRandomPinballId($unansweredPinballs);
+          $answeredPinballIds = $this->_getAnsweredPinballIds();
+          $pinballId = Pinball::whereNotIn('id', $answeredPinballIds)->pluck('id')->random();
       }
-      return $pinballId;
+      return intval($pinballId);
     }
 
-    private function _generateRandomPinballId($pinballIds = NULL)
-    {
-      if(is_null($pinballIds)){
-        $pinballIds = Pinball::select('id')->get()->toArray();
-      }
-      return intval($pinballIds[rand(0, sizeof($pinballIds)-1)]["id"]);
+    private function _getAnsweredPinballIds(){
+      $latestGame = $this->getIncompleteGame();
+      return $latestGame->getAnsweredPinballIds();
     }
 
     public function getNextQuestion(int $pinballId)

@@ -113,7 +113,7 @@ class QuestionPinballAnswers extends Seeder
       $question4->answers()->create(['answer_text' => 'Honderdvijftig']);
 
       $question5 = Question::create(['question_text' => 'Welke revolutie heeft sterk bijgedragen tot het versterken van het natuurlijk broeikaseffect?', 'pinball_id' => $pinball_id]);
-      $question5->answers()->create(['answer_text' => 'Industriele revolutie']);
+      $question5->answers()->create(['answer_text' => 'Industriële revolutie']);
 
       array_push($returnArray, $question, $question2, $question3, $question4, $question5);
       return $returnArray;

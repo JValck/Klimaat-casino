@@ -23,7 +23,8 @@ class PinballController extends Controller
 
     private function _toImageName($name)
     {
-      return str_ireplace(" ", "_", str_ireplace("?", "", $name));
+      $replaced = str_ireplace(" ", "_", str_ireplace("?", "", $name));
+      return $replaced.'.jpg';
     }
 
     public function validateAnswer(Request $request)
@@ -35,14 +36,31 @@ class PinballController extends Controller
       $player = $this->getPlayer($request);
       $question = Question::find(intval($request->input('question')));
       $answer = $question->answers()->first();
-      $valid = (strcasecmp($answer->answer_text, $request->input('answer')) == 0);
+      $valid = (strcasecmp($answer->answer_text, trim($request->input('answer'))) == 0);
       $this->handleDatabase($question, $player, $valid, $request->session()->get('bet'));
       $request->session()->forget('bet');
+      return $this->_nextView($valid, $player, $request->id);
+    }
+
+    private function _nextView($valid, $player, $pinballId)
+    {
+      $game = $player->getIncompleteGame();
+      if($game->hasAnsweredAllPinballs()){
+          return redirect('end');
+      }else{
+          return $this->_createResultViewWithNextPinball($valid, $player, $pinballId);
+      }
+    }
+
+    private function _createResultViewWithNextPinball($valid, $player, $pinballId)
+    {
+      $pinball = Pinball::find($pinballId);
       return view('partials.game.question_result', [
         'valid' => $valid,
-        'pinball' => Pinball::find($request->id),
-        'uitsoot' => $player->getEmmission(),
+        'pinball' => $pinball,
+        'uitstoot' => $player->getEmmission(),
         'id' => $player->getNextPinballId(),
+        'backgroundImage' => $this->_toImageName($pinball->name),
       ]);
     }
 
@@ -54,7 +72,7 @@ class PinballController extends Controller
       $playerAnswer->game_id = $player->getIncompleteGame()->id;
       $playerAnswer->bet = $bet;
       $playerAnswer->joker_used = false;
-      $playerAnswer->right = $valid;
+      $playerAnswer->correct = $valid;
       $playerAnswer->save();
     }
 }

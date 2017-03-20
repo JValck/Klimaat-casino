@@ -22,4 +22,8 @@ return [
   'doorgaan' => 'Doorgaan',
   'helaas' => 'Helaas',
   'proficiat' => 'Proficiat',
+  'volgendePinball' => 'Volgende flipperkast',
+  'eindeVanHetSpel' => 'Einde van het spel',
+  'opnieuwSpelen' => 'Opnieuw Spelen',
+  'info' => 'Info',
 ];
