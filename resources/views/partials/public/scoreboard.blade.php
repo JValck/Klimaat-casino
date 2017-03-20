@@ -25,5 +25,5 @@
 @stop
 
 @section('card-action')
-<a type="submit" class="waves-effect waves-light btn-large"><i class="material-icons left">info</i>{{ trans('messages.info') }}</a>
+<a href="{{ url('about') }}" class="waves-effect waves-light btn-large"><i class="material-icons left">info</i>{{ trans('messages.info') }}</a>
 @stop

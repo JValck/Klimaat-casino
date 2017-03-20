@@ -12,13 +12,13 @@ class PlayerAliasesSeeder extends Seeder
     public function run()
     {
       DB::table('player_aliases')->insert(array(
-        array('name' => 'Ijzige Ijsbeer', 'description' => 'Is hier nog uitleg over nodig? Op welke planeet leefde je de afgelopen jaren? PSO J318.5-22? Kepler-62?'),
-        array('name' => 'Temperatuursgevoelige Oranjevlek Vijlvis', 'description' => 'Volledig afhankelijk van koraalrif, heeft deze vissoort het moeilijk om zich aan te passen aan hogere temperaturen. Een plotse temperatuursstijging in 1988 in het zeewater rondom Japan lag aan de basis voor het uitsterven van de soort in dat gebied.'),
-        array('name' => 'Trage Kokerboom', 'description' => 'Deze traag groeiende boom heeft een zeer lage voortplantingssnelheid, waardoor de boomsoort zich moeilijk kan aanpassen.'),
-        array('name' => 'Migrerende Adeliepinguïn', 'description' => 'Krill dat leeft rondom ijsschotsen is de voedselbron van deze pinguïn. Helaas daalt de krill populatie desastreus door de opwarming van het water.'),
-        array('name' => 'Koudwaterige Atlantische Kabeljauw', 'description' => 'Overbevissing en veranderingen in de zeestromingen liggen aan de basis voor een hele hoop kopzorgen voor de Atlantische Kabeljauw. Vroeger herstelde de populatie zich snel van de bevissing, dat is nu niet meer het geval.'),
-        array('name' => 'Temperatuursgevoelig Hertshoornkoraal', 'description' => 'Koraal is erg gevoelig voor temperatuursveranderingen. De stijging van de temperatuur is dan ook nefast.'),
-        array('name' => 'Uitgestorven Rode Pad', 'description' => 'Volledig uitgestorven door droogte in de natuurlijke habitat.'),
+        array('name' => 'Ijzige Ijsbeer', 'description' => 'Is hier nog uitleg over nodig? Op welke planeet leefde je de afgelopen jaren? PSO J318.5-22? Kepler-62?', 'image' => 'ijsbeer.jpg'),
+        array('name' => 'Temperatuursgevoelige Oranjevlek Vijlvis', 'description' => 'Volledig afhankelijk van koraalrif, heeft deze vissoort het moeilijk om zich aan te passen aan hogere temperaturen. Een plotse temperatuursstijging in 1988 in het zeewater rondom Japan lag aan de basis voor het uitsterven van de soort in dat gebied.', 'image' => 'vijlvis.jpg'),
+        array('name' => 'Trage Kokerboom', 'description' => 'Deze traag groeiende boom heeft een zeer lage voortplantingssnelheid, waardoor de boomsoort zich moeilijk kan aanpassen.', 'image' => 'koker.jpg'),
+        array('name' => 'Migrerende Adeliepinguïn', 'description' => 'Krill dat leeft rondom ijsschotsen is de voedselbron van deze pinguïn. Helaas daalt de krill populatie desastreus door de opwarming van het water.', 'image' => 'adelie.jpg'),
+        array('name' => 'Koudwaterige Atlantische Kabeljauw', 'description' => 'Overbevissing en veranderingen in de zeestromingen liggen aan de basis voor een hele hoop kopzorgen voor de Atlantische Kabeljauw. Vroeger herstelde de populatie zich snel van de bevissing, dat is nu niet meer het geval.', 'image' => 'kabeljauw.jpg'),
+        array('name' => 'Temperatuursgevoelig Hertshoornkoraal', 'description' => 'Koraal is erg gevoelig voor temperatuursveranderingen. De stijging van de temperatuur is dan ook nefast.', 'image' => 'koraal.jpg'),
+        array('name' => 'Uitgestorven Rode Pad', 'description' => 'Volledig uitgestorven door droogte in de natuurlijke habitat.', 'image' => 'pad.jpg'),
         array('name' => 'Vroeg broedende Bairds Strandloper', 'description' => 'Het broedseizoen valt steeds vroeger op het jaar, waardoor er te weinig voedselbronnen zijn om de jongen te laten opgroeien. Steeds minder jongen geraken aan de volwassen leeftijd.'),
         array('name' => 'Veeleisende Grote Berglobelia', 'description' => 'Door de hoge eisen van deze plant, kan het erg moeilijk aarden in zijn nieuwe habitat.'),
         array('name' => 'Verdronken Bramble Cay-mozaïekstaartrat', 'description' => 'Deze rat leeft aan de vloedlijn van Bramble Cay. Door de stijging van de zeespiegel en toenemende frequentie van stormen is dit eiland ten dode opgeschreven.'),

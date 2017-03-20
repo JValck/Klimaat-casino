@@ -17,6 +17,7 @@ class CreatePlayerAliasesTable extends Migration
       $table->increments('id');
       $table->text('name');
       $table->text('description');
+      $table->text('image');
     });
   }
 
