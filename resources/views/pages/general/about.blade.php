@@ -9,6 +9,9 @@
       @foreach($aliases as $alias)
         <div class="col s12 m6">
           <div class="card">
+            <div class="card-image">
+              <img src="{{ url('img/'.$alias->image)}}" alt="{{$alias->name}}" />
+            </div>
             <div class="card-content">
               <span class="card-title">{{$alias->name}}</span>
               <p>{{$alias->description}}</p>
