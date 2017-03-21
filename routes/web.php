@@ -22,9 +22,10 @@ Route::group(['middleware' => 'isLoggedIn'], function(){
   Route::get('bet', 'BetController@index');
   Route::post('bet', 'BetController@bet');
   Route::get('end', 'GameController@end');
+  Route::get('answered/{id}', 'GameController@alreadyAnswered');
 });
 
-Route::group(['middleware' => ['isLoggedIn', 'hasRaisedBet']], function(){
+Route::group(['middleware' => ['isLoggedIn', 'hasRaisedBet', 'hasNotAnsweredThePinball']], function(){
   Route::get('pinball/{id}', 'PinballController@index');
   Route::post('pinball/{id}', 'PinballController@validateAnswer');
 });

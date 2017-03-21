@@ -58,5 +58,6 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'isLoggedIn' => \App\Http\Middleware\IsLoggedIn::class,
         'hasRaisedBet' => \App\Http\Middleware\HasRaisedBet::class,
+        'hasNotAnsweredThePinball' => \App\Http\Middleware\PinballUnanswered::class,
     ];
 }

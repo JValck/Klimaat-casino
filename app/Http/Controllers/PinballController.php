@@ -23,7 +23,7 @@ class PinballController extends Controller
 
     private function _toImageName($name)
     {
-      $replaced = str_ireplace(" ", "_", str_ireplace("?", "", $name));
+      $replaced = str_ireplace(".", "", str_ireplace(",", "", str_ireplace(" ", "_", str_ireplace("?", "", $name))));
       return $replaced.'.jpg';
     }
 

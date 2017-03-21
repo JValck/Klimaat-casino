@@ -60,4 +60,15 @@ class GameController extends Controller
     {
       return view('partials.public.scoreboard', ['games' => Game::getScoreboard()]);
     }
+
+    public function alreadyAnswered(Request $request)
+    {
+      $player = $this->getPlayer($request);
+      return view('partials.game.already_answered', [
+        'pinball' => \App\Pinball::find($request->id),
+        'end' => (is_null($player->getIncompleteGame())),
+        'next' => (is_null($player->getIncompleteGame()))? 'start': ('pinball/'.$player->getNextPinballId()),
+        'backgroundImage' => 'drought.jpg',
+      ]);
+    }
 }

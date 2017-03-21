@@ -26,4 +26,7 @@ return [
   'eindeVanHetSpel' => 'Einde van het spel',
   'opnieuwSpelen' => 'Opnieuw Spelen',
   'info' => 'Info',
+  'oeps' => 'Oeps',
+  'pinballAlBeantwoord' => 'Je hebt de vraag van deze flipperkast al beantwoord.',
+  'klikOpDoorgaanVoorVolgendePinball' => 'Klik onderaan op de knop \'Volgende flipperkast\' om naar de volgende flipperkast te gaan.',
 ];
