@@ -11,6 +11,9 @@
   <link type="text/css" rel="stylesheet" href="{{ asset('css/materialize.css') }}"  media="screen,projection"/>
   <link type="text/css" rel="stylesheet" href="{{ asset('css/custom.css')}}" />
 
+  <link rel="shortcut icon" href="{{asset('favicon.png') }}"/>
+  <meta name="theme-color" content="#e00049">
+
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>

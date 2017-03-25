@@ -15,3 +15,13 @@ body, html {
     background-image: url(../img/home_hd.jpg);
   }
 }
+
+.navbar-ucll, .btn, .btn-large{
+  background-color: #e00049;
+}
+.btn:hover, .btn-large:hover{
+    background-color: #fa1a63;
+}
+.dropdown-content li > a, .dropdown-content li > span{
+  color: #e00049;
+}
