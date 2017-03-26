@@ -1,8 +1,8 @@
 @extends('pages.general.home')
 
 @section('card-content')
-  <span class="card-title">{{trans('messages.bet')}}</span>
-  <p>{!! trans('messages.kiesHetGewensteInzetBedrag') !!}</p>
+  <span class="card-title">{{$pinball->name}} <small>{{ $pinball->quote }}</small></span>
+  <p>Hoeveel kg CO<sub>2</sub> wil je inzetten voor een vraag van flipperkast "{{$pinball->name}}"?</p>
   <p>{{ trans('messages.aantalKilo') }}</p>
   <p class="range-field">
     <input type="range" min="{{ $minBet }}" max="{{ $maxBet }}" name="bet" />

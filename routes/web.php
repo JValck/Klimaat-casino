@@ -16,6 +16,7 @@ Route::get('login', 'LoginController@index');
 Route::post('login', 'LoginController@validateLogin');
 Route::get('score', 'GameController@scoreboard');
 Route::get('about', 'HomeController@about');
+Route::get('ajax/alias/{id}', 'PlayerAliasController@ajaxAliasInfo');
 
 Route::group(['middleware' => 'isLoggedIn'], function(){
   Route::get('start', 'GameController@index');

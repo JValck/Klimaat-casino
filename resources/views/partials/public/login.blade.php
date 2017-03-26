@@ -15,7 +15,7 @@
   </div>
   <div class="row">
     <div class="input-field col s12">
-      <select name="alias">
+      <select name="alias" id="alias-select">
         <!--<option value="" disabled selected>{{trans('messages.maakUwKeuze')}}</option>-->
         @foreach($aliases as $alias)
           <option value="{{$alias->id}}">{{$alias->name}}</option>
@@ -30,4 +30,8 @@
   <button class="btn waves-effect waves-light">{{trans('messages.starten')}}
     <i class="material-icons right">send</i>
   </button>
+@stop
+
+@section('extra')
+@include('partials.public.modal.alias_modal')
 @stop

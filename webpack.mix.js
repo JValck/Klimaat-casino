@@ -43,3 +43,4 @@ mix.copy('node_modules/materialize-css/dist/css/materialize.min.css', 'public/cs
 
   //custom
   .copy(resourcesCss+'custom.css', 'public/css/custom.css')
+  .scripts([resourcesJs+'alias_modal.js'], 'public/js/alias_modal.js')

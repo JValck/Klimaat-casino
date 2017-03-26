@@ -1,5 +1,6 @@
 <nav class="navbar-ucll" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">Klimaatcasino</a>
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="/" class="brand-logo"><img class="logo-image hide-on-small-only" src="{{ asset('img/logo_white.png') }}" alt=""/> <span>Klimaatcasino</span></a>
       <ul class="right hide-on-med-and-down">
         @yield('menu-links')
       </ul>

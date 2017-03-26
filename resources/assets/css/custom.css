@@ -25,3 +25,13 @@ body, html {
 .dropdown-content li > a, .dropdown-content li > span{
   color: #e00049;
 }
+
+.brand-logo, .logo-image {
+  height: inherit;
+}
+
+.logo-image{
+  vertical-align: middle;
+  padding: 5px;
+  margin-top: -5px;
+}

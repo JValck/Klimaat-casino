@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\CasinoSetting;
+use App\Pinball;
 
 class BetController extends Controller
 {
@@ -14,6 +15,7 @@ class BetController extends Controller
         'action' => $request->url(),
         'minBet' => CasinoSetting::where('name', 'min_bet')->first()->setting,
         'maxBet' => CasinoSetting::where('name', 'max_bet')->first()->setting,
+        'pinball' => Pinball::find($request->session()->get('pinballId')),
       ]);
     }
 
